@@ -1,3 +1,9 @@
+---
+import "../styles/global.css";
+
+const toggleSidebar = false;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -7,8 +13,16 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body>
-		<slot />
+	<body class="bg-slate-100">
+		<div class="max-w-7xl mx-auto">
+			<nav class="bg-gray-300 py-6 px-4 flex justify-between">
+				<h3 class="font-bold">El GATO NEGRO</h3>
+				<div>
+					<button class="px-2 py-1 bg-gray-800 text-slate-50">menu</button>
+				</div>
+			</nav>
+			<slot />
+		</div>
 	</body>
 </html>
 
